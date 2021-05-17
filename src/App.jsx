@@ -1,45 +1,51 @@
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
-import "./index.css"
-import "bootstrap/dist/css/bootstrap.min.css"
-import Header from "./components/Partials/Header.jsx"
-import Sidebar from "./components/Partials/Sidebar"
-import FooterScripts from "./components/Partials/Footer.jsx"
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import "./index.css";
+
+//Sections
+import Index from "./components/Pages/Index/Index.jsx";
+import Main from "./components/Pages/Main/Main.jsx";
+import QuickProjects from "./components/Pages/QuickProjects/QuickProjects";
+import Aforo from "./components/Pages/QuickProjects/Aforo";
+import Contadores from "./components/Pages/QuickProjects/Contadores";
+import TextToSpeach from "./components/Pages/QuickProjects/TextToSpeech";
+
+//Components
+import Header from "./components/Partials/Header";
+import Sidebar from "./components/Partials/Sidebar";
+import Footer from "./components/Partials/Footer";
 
 function App() {
-  return (
-    <Router>
-      <Switch>
+    return (
+        <Router>
+            <div className="container-fluid p-0">
+                <Header />
+                <Switch>
+                    <Route path="/" exact>
+                        <Index />
+                    </Route>
 
-        <Route path="/" exact>
-          <h1 className="display-2">Hello World</h1>
-          <Link to="/main">Siguiente</Link>
-        </Route>
-
-        <Route path="/main">
-          <div className="container-fluid" id="page-wrapper">
-            <div className="container" id="HeaderContainer">
-              <Header />
+                    <Route path="/main">
+                        <Main />
+                    </Route>
+                    <Route path="/quick-projects/aforo">
+                        <Aforo />
+                    </Route>
+                    <Route path="/quick-projects/contadores">
+                        <Contadores />
+                    </Route>
+                    <Route path="/quick-projects/text-to-speech">
+                        <TextToSpeach />
+                    </Route>
+                    <Route path="/quick-projects">
+                        <QuickProjects />
+                    </Route>
+                    <Redirect to="/"></Redirect>
+                </Switch>
+                <Sidebar />
+                <Footer />
             </div>
-            <div className="container" id="BodyContainer">
-              <h1 className="display-4">Bienvenidos</h1>
-              <p>
-                Little tools es una plataforma de desarrollo de componentes y librerias para desarrollo web de código abierto.
-              </p>
-              <p>
-                La plataforma esta abierta en Github y si deseais incorporar y colaborar en la sección de <a href="contacto">contacto</a> encontrareis todos los enlaces para contactarme o directamente el repositorio de Github para acceder al código directamente.
-              </p>
-            </div>
-            <Sidebar />
-            <footer>
-              <FooterScripts />
-            </footer>
-          </div>
-        </Route>
-
-      </Switch>
-    </Router>
-
-  );
+        </Router>
+    );
 }
 
 export default App;

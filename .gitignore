@@ -24,3 +24,5 @@ yarn-error.log*
 
 #others
 littletools.code-workspace
+.gitignore
+firebase.js
