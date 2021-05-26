@@ -1,0 +1,13 @@
+.green-block-decor {
+    border-radius: 0.25rem;
+    box-shadow: 5px 5px 0 #198754;
+}
+
+.orange-block-decor {
+    border-radius: 0.25rem;
+    box-shadow: 5px 5px 0 #ffc107;
+}
+.red-block-decor {
+    border-radius: 0.25rem;
+    box-shadow: 5px 5px 0 #dc3545;
+}

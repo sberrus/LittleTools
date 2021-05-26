@@ -30,7 +30,7 @@ function App() {
                     <Route path="/quick-projects/aforo">
                         <Aforo />
                     </Route>
-                    <Route path="/quick-projects/contadores">
+                    <Route path="/quick-projects/contadores:id">
                         <Contadores />
                     </Route>
                     <Route path="/quick-projects/text-to-speech">

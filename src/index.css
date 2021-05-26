@@ -3,6 +3,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-weight: lighter !important;
 }
 
 code {
@@ -19,4 +20,11 @@ code {
 
 .nav_bar_toggle{
     display: none;
+}
+img.card-img-top{
+    object-fit: cover;
+}
+
+#nav_bar_toggle{
+    z-index: 1000;
 }
