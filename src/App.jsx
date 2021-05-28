@@ -8,6 +8,7 @@ import QuickProjects from "./components/Pages/QuickProjects/QuickProjects";
 import Aforo from "./components/Pages/QuickProjects/Aforo";
 import Contadores from "./components/Pages/QuickProjects/Contadores";
 import TextToSpeach from "./components/Pages/QuickProjects/TextToSpeech";
+import LittleTools from "./components/Pages/LittleTools/LittleTools";
 
 //Components
 import Header from "./components/Partials/Header";
@@ -38,6 +39,9 @@ function App() {
                     </Route>
                     <Route path="/quick-projects">
                         <QuickProjects />
+                    </Route>
+                    <Route path="/little-tools">
+                        <LittleTools />
                     </Route>
                     <Redirect to="/"></Redirect>
                 </Switch>
