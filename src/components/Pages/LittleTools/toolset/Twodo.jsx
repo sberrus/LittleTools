@@ -82,8 +82,8 @@ const Twodo = () => {
                 <button
                     className="btn btn-outline-warning float-end"
                     type="button"
-                    onClick={()=>{
-                        setCompletedTasks(null)
+                    onClick={() => {
+                        setCompletedTasks(null);
                     }}
                 >
                     <i className="bi bi-trash"></i>Borrar Completos
@@ -160,9 +160,7 @@ const Twodo = () => {
                     <thead>
                         <tr>
                             <th scope="col"></th>
-                            <th scope="col" width="15%">
-                                Acciones
-                            </th>
+                            <th scope="col" width="15%"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -181,7 +179,9 @@ const Twodo = () => {
                                         {item.taskTitle}
                                     </td>
                                     <td>
-                                        <button className="btn btn-outline-danger">Eliminar</button>
+                                        <button className="btn text-danger border border-danger">
+                                            <i className="bi bi-trash"></i>
+                                        </button>
                                     </td>
                                 </tr>
                             ))}
